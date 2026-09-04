@@ -2,7 +2,7 @@
 
 import pytest
 
-from evidence_graph.core.models import (
+from synapse.core.models import (
     QueryCategory,
     QueryPlan,
     SourceType,

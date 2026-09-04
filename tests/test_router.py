@@ -2,8 +2,8 @@
 
 import pytest
 
-from evidence_graph.agents.router import classify_query_rules, QueryRouter
-from evidence_graph.core.models import QueryCategory
+from synapse.agents.router import classify_query_rules, QueryRouter
+from synapse.core.models import QueryCategory
 
 
 class TestRuleBasedRouting:
@@ -23,7 +23,7 @@ class TestRuleBasedRouting:
 
     def test_generic_query_defaults_to_semantic(self):
         """A query with no specific signals should default to semantic search."""
-        assert classify_query_rules("medicines for headache") == QueryCategory.SEMANTIC_SEARCH
+        assert classify_query_rules("safe over the counter painkillers") == QueryCategory.SEMANTIC_SEARCH
 
     def test_empty_query_defaults_to_semantic(self):
         assert classify_query_rules("") == QueryCategory.SEMANTIC_SEARCH

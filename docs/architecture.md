@@ -1,8 +1,8 @@
-# EvidenceGraph — System Architecture
+# Synapse — System Architecture
 
 ## Overview
 
-EvidenceGraph is a neuro-symbolic retrieval-augmented generation (RAG) system
+Synapse is a neuro-symbolic retrieval-augmented generation (RAG) system
 for evidence-grounded question answering.  It combines three retrieval backends
 (knowledge graph, dense vector, BM25 lexical), evidence fusion, LLM-based synthesis,
 and best-effort grounding verification.

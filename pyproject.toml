@@ -1,9 +1,9 @@
 [build-system]
 requires = ["setuptools>=68.0", "wheel"]
-build-backend = "setuptools.backends._legacy:_Backend"
+build-backend = "setuptools.build_meta"
 
 [project]
-name = "evidence-graph"
+name = "synapse"
 version = "1.0.0"
 description = "Neuro-symbolic agentic RAG for evidence-grounded question answering"
 readme = "README.md"
@@ -53,7 +53,7 @@ dev = [
 ]
 
 [project.scripts]
-evidence-graph = "evidence_graph.application.cli:main"
+synapse = "synapse.application.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

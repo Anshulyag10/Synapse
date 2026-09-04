@@ -2,7 +2,7 @@
 
 ## Overview
 
-EvidenceGraph uses three complementary retrieval backends, each with different strengths:
+Synapse uses three complementary retrieval backends, each with different strengths:
 
 | Backend | Strength | Weakness | When Used |
 |---------|----------|----------|-----------|

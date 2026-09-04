@@ -1,14 +1,14 @@
-"""Shared test fixtures for EvidenceGraph."""
+"""Shared test fixtures for Synapse."""
 
 import pytest
 
-from evidence_graph.core.config import EvidenceGraphSettings
+from synapse.core.config import SynapseSettings
 
 
 @pytest.fixture
 def settings():
     """Settings with all external services disabled (for unit tests)."""
-    return EvidenceGraphSettings(
+    return SynapseSettings(
         neo4j_uri="bolt://localhost:7687",
         neo4j_username="neo4j",
         neo4j_password="test",

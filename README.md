@@ -1,6 +1,6 @@
-# EvidenceGraph — Neuro-Symbolic Agentic RAG for Evidence-Grounded Question Answering
+# Synapse — Neuro-Symbolic Agentic RAG for Evidence-Grounded Question Answering
 
-I built EvidenceGraph as a neuro-symbolic retrieval-augmented generation system that
+I built Synapse as a neuro-symbolic retrieval-augmented generation system that
 combines knowledge graph traversal, dense vector retrieval, BM25 lexical search,
 cross-encoder reranking, and LLM-based synthesis to produce evidence-grounded
 answers with provenance tracking.
@@ -99,7 +99,7 @@ be domain-agnostic, with healthcare-specific mappings isolated in a domain adapt
 
 ```bash
 git clone <repo-url>
-cd EvidenceGraph
+cd Synapse
 python -m venv venv
 venv\Scripts\activate          # Windows
 pip install torch --index-url https://download.pytorch.org/whl/cu128
@@ -178,7 +178,7 @@ and answer quality.
 
 ```bash
 python run.py benchmark               # generate Evaluation/benchmark.csv
-python -m evidence_graph.evaluation    # run evaluation
+python -m synapse.evaluation    # run evaluation
 ```
 
 **Metrics measured:**
@@ -196,8 +196,8 @@ Seven configurations to measure component contributions:
 ## Project Structure
 
 ```
-EvidenceGraph/
-├── src/evidence_graph/
+Synapse/
+├── src/synapse/
 │   ├── core/              # Config, models, exceptions, logging
 │   ├── retrieval/          # Graph, vector, lexical, hybrid retrievers
 │   ├── agents/             # Router, planner, evidence agent, synthesis

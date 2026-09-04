@@ -2,7 +2,7 @@
 
 ## Overview
 
-EvidenceGraph includes a benchmark generator, scoring harness, and ablation
+Synapse includes a benchmark generator, scoring harness, and ablation
 framework for measuring retrieval, routing, and answer quality.
 
 ## Metrics

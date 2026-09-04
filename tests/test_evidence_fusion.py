@@ -2,8 +2,8 @@
 
 import pytest
 
-from evidence_graph.grounding.evidence_fusion import fuse_evidence, _minmax_normalise
-from evidence_graph.core.models import (
+from synapse.grounding.evidence_fusion import fuse_evidence, _minmax_normalise
+from synapse.core.models import (
     GraphEvidence,
     VectorEvidence,
     LexicalEvidence,

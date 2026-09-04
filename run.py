@@ -1,4 +1,4 @@
-"""Convenience entry point for EvidenceGraph.
+"""Convenience entry point for Synapse.
 
 Usage:
   python run.py                   # interactive QA REPL
@@ -21,36 +21,36 @@ def main():
     command = sys.argv[1] if len(sys.argv) > 1 else "query"
 
     if command == "query":
-        from evidence_graph.application.cli import main as cli_main
+        from synapse.application.cli import main as cli_main
         cli_main()
 
     elif command == "serve":
         import uvicorn
-        from evidence_graph.core.config import load_settings
+        from synapse.core.config import load_settings
 
         cfg = load_settings()
         uvicorn.run(
-            "evidence_graph.application.api:app",
+            "synapse.application.api:app",
             host=cfg.api_host,
             port=cfg.api_port,
             reload=False,
         )
 
     elif command == "ingest-graph":
-        from evidence_graph.ingestion.graph_builder import main as graph_main
+        from synapse.ingestion.graph_builder import main as graph_main
         graph_main()
 
     elif command == "ingest-vector":
-        from evidence_graph.ingestion.vector_indexer import main as vector_main
+        from synapse.ingestion.vector_indexer import main as vector_main
         vector_main()
 
     elif command == "benchmark":
-        from evidence_graph.evaluation.benchmark import main as bench_main
+        from synapse.evaluation.benchmark import main as bench_main
         bench_main()
 
     elif command == "streamlit":
         import subprocess
-        app_path = Path(__file__).parent / "src" / "evidence_graph" / "application" / "streamlit_app.py"
+        app_path = Path(__file__).parent / "src" / "synapse" / "application" / "streamlit_app.py"
         subprocess.run([sys.executable, "-m", "streamlit", "run", str(app_path)])
 
     else:

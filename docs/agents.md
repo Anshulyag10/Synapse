@@ -2,7 +2,7 @@
 
 ## Overview
 
-EvidenceGraph uses a layered agent architecture:
+Synapse uses a layered agent architecture:
 
 ```
 Query → Router → Planner → Evidence Agent (LLM loop) → Synthesis → Verification

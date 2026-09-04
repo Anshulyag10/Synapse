@@ -1,0 +1,28 @@
+# -------- Core ML (GPU) --------
+# Install torch separately with the right CUDA build, e.g.:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu128
+# torch
+sentence-transformers
+
+# -------- Vector DB --------
+chromadb>=0.4.22
+
+# -------- Knowledge Graph --------
+neo4j>=5.14.0
+
+# -------- Retrieval (KG candidate generation + reranking) --------
+rank-bm25
+rapidfuzz
+
+# -------- LLM APIs / Runtime --------
+groq                # Agent 1 (router) + Agent 4 (synthesis)
+ollama              # local quantised model for KG ingestion normalization
+
+# -------- Frontend --------
+streamlit
+
+# -------- Utils --------
+python-dotenv
+numpy
+tqdm
+pydantic

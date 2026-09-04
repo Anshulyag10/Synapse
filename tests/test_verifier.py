@@ -2,12 +2,12 @@
 
 import pytest
 
-from evidence_graph.grounding.verifier import (
+from synapse.grounding.verifier import (
     extract_claims,
     check_claim_support,
     verify_grounding,
 )
-from evidence_graph.core.models import (
+from synapse.core.models import (
     ClaimStatus,
     EvidenceBundle,
     VectorEvidence,

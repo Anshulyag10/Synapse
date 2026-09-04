@@ -2,7 +2,7 @@
 
 import pytest
 
-from evidence_graph.evaluation.retrieval_metrics import (
+from synapse.evaluation.retrieval_metrics import (
     rank_of,
     recall_at_k,
     reciprocal_rank,
