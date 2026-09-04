@@ -1,0 +1,67 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "evidence-graph"
+version = "1.0.0"
+description = "Neuro-symbolic agentic RAG for evidence-grounded question answering"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+dependencies = [
+    # Core ML — install torch separately with the right CUDA build:
+    #   pip install torch --index-url https://download.pytorch.org/whl/cu128
+    "sentence-transformers",
+
+    # Vector store
+    "chromadb>=0.4.22",
+
+    # Knowledge graph
+    "neo4j>=5.14.0",
+
+    # Retrieval (candidate generation + reranking)
+    "rank-bm25",
+    "rapidfuzz",
+
+    # LLM APIs
+    "groq",
+    "ollama",
+
+    # Configuration
+    "pydantic>=2.0",
+    "pydantic-settings>=2.0",
+    "python-dotenv",
+
+    # API server
+    "fastapi",
+    "uvicorn[standard]",
+
+    # Frontend
+    "streamlit",
+
+    # Utilities
+    "numpy",
+    "tqdm",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov",
+    "ruff",
+]
+
+[project.scripts]
+evidence-graph = "evidence_graph.application.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100

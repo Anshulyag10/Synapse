@@ -1,0 +1,78 @@
+# Credentials
+.env
+
+# Virtual environment
+venv/
+env/
+ENV/
+*.virtualenv
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Generated data stores
+datastore/chroma_db/
+datastore/corpus_records.json
+datastore/.llm_cache.json
+embeddings_cache.pkl
+
+# Large data files (download from Kaggle)
+data/healthcare/medicine_data.csv
+
+# Neo4j local database
+neo4j_data/
+*.db
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Type checking
+.mypy_cache/
+
+# Evaluation transient files
+src/evidence_graph/evaluation/eval_partial.jsonl
+
+# Old MedRAG files (will be deleted)
+DB/
+agents/
+Evaluation/
+streamlit/
+main.py
+architecture.py
+PROJECT_SUMMARY.md
+
+# Other
+*.bak
+*.tmp
+.cache/
