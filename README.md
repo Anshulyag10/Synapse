@@ -1,4 +1,4 @@
-# Synapse — Neuro-Symbolic Agentic RAG for Evidence-Grounded Question Answering
+# Synapse : Neuro-Symbolic Agentic RAG for Evidence-Grounded Question Answering
 
 I built Synapse as a neuro-symbolic retrieval-augmented generation system that
 combines knowledge graph traversal, dense vector retrieval, BM25 lexical search,
